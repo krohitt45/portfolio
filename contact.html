@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animation Styles */
+        .contact h1 {
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+        }
+
+        .contact-intro {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+
+        .contact-container {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .contact-form {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 1s ease-out 1s forwards;
+        }
+
+        .contact-info {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInRight 1s ease-out 1.2s forwards;
+        }
+
+        .form-group {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .form-group:nth-child(1) { animation-delay: 1.4s; }
+        .form-group:nth-child(2) { animation-delay: 1.6s; }
+        .form-group:nth-child(3) { animation-delay: 1.8s; }
+        .form-group:nth-child(4) { animation-delay: 2s; }
+
+        .submit-btn {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 2.2s forwards;
+        }
+
+        .info-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .info-item:nth-child(1) { animation-delay: 1.4s; }
+        .info-item:nth-child(2) { animation-delay: 1.6s; }
+        .info-item:nth-child(3) { animation-delay: 1.8s; }
+        .info-item:nth-child(4) { animation-delay: 2s; }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Enhanced Hover Effects */
+        .form-group input:hover,
+        .form-group textarea:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+        }
+
+        
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Typing Animation for Intro */
+        .contact-intro {
+            overflow: hidden;
+            border-right: 2px solid #00f7ff;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00f7ff; }
+        }
+
+        /* Social Links Animation */
+        .social-links a {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .social-links a:nth-child(1) { animation-delay: 2.2s; }
+        .social-links a:nth-child(2) { animation-delay: 2.4s; }
+        .social-links a:nth-child(3) { animation-delay: 2.6s; }
+        .social-links a:nth-child(4) { animation-delay: 2.8s; }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(0);
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .contact h1 {
+                animation-duration: 0.8s;
+            }
+
+            .contact-intro {
+                animation-duration: 0.8s;
+            }
+
+            .contact-container {
+                animation-duration: 0.8s;
+            }
+
+            .form-group,
+            .info-item {
+                animation-duration: 0.6s;
+            }
+
+            .social-links a {
+                animation-duration: 0.6s;
+            }
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .contact h1,
+            .contact-intro,
+            .contact-container,
+            .contact-form,
+            .contact-info,
+            .form-group,
+            .submit-btn,
+            .info-item,
+            .social-links a {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .contact-intro {
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Navbar -->
+    <header>
+        <h2 class="logo"></h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Portfolio</a>
+            <a href="contact.html" class="active">Contact</a>
+
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Get In Touch</h1>
+        <p class="contact-intro">I'd love to hear from you! Whether you have a project in mind or just want to say hello, feel free to reach out.</p>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                
+                <div class="info-item">
+                    <h4>Email</h4>
+                    <p><a href="mailto:krrohit264@gmail.com">krrohit264@gmail.com</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+919508318632">+91 9508318632</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Location</h4>
+                    <p>India</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/krohitt45" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/rohit-kumar" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+/* ✅ EmailJS Init */
+(function(){
+    emailjs.init("2o0dsbfwte5zuTCx9");
+})();
+
+/* ✅ Contact Form Submit */
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const btn = document.querySelector(".submit-btn");
+    const originalText = btn.innerText;
+
+    btn.innerText = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm("service_zgh6u46", "template_6xtknmz", this)
+    .then(() => {
+        createParticles(); // keep your animation
+        alert("Message sent successfully!");
+        this.reset();
+    })
+    .catch(err => {
+        alert("Error: " + err.text);
+    })
+    .finally(() => {
+        btn.innerText = originalText;
+        btn.disabled = false;
+    });
+});
+
+/* ✅ Particle Animation (unchanged) */
+function createParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.style.position = 'fixed';
+    particlesContainer.style.top = '0';
+    particlesContainer.style.left = '0';
+    particlesContainer.style.width = '100%';
+    particlesContainer.style.height = '100%';
+    particlesContainer.style.pointerEvents = 'none';
+    particlesContainer.style.zIndex = '9999';
+    document.body.appendChild(particlesContainer);
+
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.style.position = 'absolute';
+        particle.style.width = '4px';
+        particle.style.height = '4px';
+        particle.style.background = '#00f7ff';
+        particle.style.borderRadius = '50%';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animation = `particleFloat ${Math.random() * 2 + 1}s ease-out forwards`;
+        particlesContainer.appendChild(particle);
+    }
+
+    setTimeout(() => {
+        document.body.removeChild(particlesContainer);
+    }, 3000);
+}
+</script>
+
+    <script>
+        // Enhanced animations and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add floating animation to contact info icons
+            const infoItems = document.querySelectorAll('.info-item');
+            infoItems.forEach((item, index) => {
+                item.style.animationDelay = `${1.4 + index * 0.2}s`;
+            });
+
+            // Add focus animations for form inputs
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'scale(1.02)';
+                    this.parentElement.style.transition = 'transform 0.3s ease';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add hover effect for contact info items
+            infoItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add click animation for submit button
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+
+            // Add scroll-triggered animations for better performance
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe animated elements
+            const animatedElements = document.querySelectorAll('.contact h1, .contact-intro, .contact-container, .contact-form, .contact-info, .form-group, .submit-btn, .info-item, .social-links a');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+
+        // Add particle effect on form submission
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.style.position = 'fixed';
+            particlesContainer.style.top = '0';
+            particlesContainer.style.left = '0';
+            particlesContainer.style.width = '100%';
+            particlesContainer.style.height = '100%';
+            particlesContainer.style.pointerEvents = 'none';
+            particlesContainer.style.zIndex = '9999';
+            document.body.appendChild(particlesContainer);
+
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '4px';
+                particle.style.height = '4px';
+                particle.style.background = '#00f7ff';
+                particle.style.borderRadius = '50%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animation = `particleFloat ${Math.random() * 2 + 1}s ease-out forwards`;
+                particlesContainer.appendChild(particle);
+            }
+
+            setTimeout(() => {
+                document.body.removeChild(particlesContainer);
+            }, 3000);
+        }
+
+        // Modify form submission to include particle effect
+          // ... existing error handling ...
+            
+            // ... existing code ...
+        
+    </script>
+
+</body>
+</html>

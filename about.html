@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h2 class="logo"></h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hi, I'm <strong>Rohit Kumar</strong> — a passionate software developer with a strong foundation in
+                Python, C++, Java, and Data Structures & Algorithms. I am dedicated to analyzing problems and building
+                efficient software solutions.</p>
+
+            <h3>Who I Am</h3>
+            <p>I bring hands-on experience working with real-world problems, building machine learning models, and
+                crafting software systems. I specialize in backend logic, data structures, algorithm optimization, and
+                object-oriented programming to create clean, modular code.</p>
+
+            <h3>What I've Built</h3>
+            <p>Through projects such as a <strong>Movie Recommendation System</strong>, <strong>Mental Health Simulation
+                    System</strong>, and <strong>Deadlock Detection System</strong>, I have sharpened my skills in
+                algorithm design, machine learning techniques, and operating system concepts. Each project has
+                reinforced my ability to extract actionable insights and develop robust software.</p>
+
+            <h3>My Approach</h3>
+            <p>I approach every challenge with analytical thinking, a structured mindset, and a commitment to continuous
+                learning. I believe great software is not just about building features — it's about understanding the
+                problem deeply, optimizing for performance, and delivering solutions that are both scalable and
+                interpretable.</p>
+
+            <h3>Beyond the Code</h3>
+            <p>When I'm not writing code or fine-tuning algorithms, I'm keeping up with the latest advancements in
+                technology, contributing to personal projects, or connecting with like-minded professionals. I thrive in
+                collaborative environments and am always eager to take on new challenges that push the boundaries of
+                what software can do.</p>
+
+            <!-- Removed old education paragraph as it's now in its own section -->
+
+            <h3>Tech Tools &amp; Technologies</h3>
+            <p>I work with a modern development stack to build efficient, scalable, and reproducible solutions:</p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Languages:</strong> Python, C/C++, Java, Kotlin</li>
+                <li><strong>Data Science &amp; ML:</strong> Pandas, NumPy</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Tools / Platforms:</strong> MS Excel, MySQL, Git &amp; GitHub</li>
+            </ul>
+
+            <div class="cta-btns" style="margin-top: 25px;">
+                <a href="cv.pdf" download class="download-button">Download CV</a>
+                <a href="#" class="cta-button view-cv-btn"
+                    style="background: transparent; border: 2px solid var(--primary); color: var(--primary);">View
+                    CV</a>
+                <a href="contact.html" class="cta-button"
+                    style="background: transparent; border: 2px solid var(--primary); color: var(--primary);">Get In
+                    Touch</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <h1 class="section-title">My Education</h1>
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <span class="year">Aug 2023 - Present</span>
+                    <h3>Bachelor of Technology - Computer Science and Engineering</h3>
+                    <p class="institution">Lovely Professional University — Punjab, India</p>
+                    <p>Focused on Software Engineering, Data Structures, and Algorithm Design. <strong>CGPA:
+                            5.71</strong></p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <span class="year">Jun 2021 - Mar 2023</span>
+                    <h3>Intermediate</h3>
+                    <p class="institution">Laxmi Narayan Dubey College — Bihar, India</p>
+                    <p>Science stream with a strong focus on analytical foundation. <strong>Percentage: 75%</strong></p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <span class="year">Apr 2018 - Apr 2019</span>
+                    <h3>Matriculation</h3>
+                    <p class="institution">Noneya High School — Bihar, India</p>
+                    <p>Completed secondary education with a strong academic record. <strong>Percentage: 82%</strong></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CV Modal -->
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeCvModal">&times;</span>
+            <div class="modal-body resume-highlights" style="padding: 20px 0; background: transparent;">
+                <h2 style="margin-top: 0; text-align: center;">Full Resume</h2>
+
+                <div class="resume-card">
+                    <h3>Contact</h3>
+                    <p>Email: krrohit264@gmail.com</p>
+                    <p>Mobile: +91 9508318632</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-kumar" target="_blank"
+                            style="color: #00f7ff;">linkedin.com/in/rohit-kumar</a></p>
+                    <p>GitHub: <a href="https://github.com/krohitt45" target="_blank"
+                            style="color: #00f7ff;">github.com/krohitt45</a></p>
+                </div>
+
+                <div class="resume-card">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, C/C++, Java, Kotlin</li>
+                        <li><strong>Frameworks:</strong> HTML and CSS.</li>
+                        <li><strong>Tools/Platforms:</strong> Ms Excel, MySQL, Git & GitHub</li>
+                        <li><strong>Soft Skills:</strong> Problem - Solving, Adaptability</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <h3>Projects</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>
+                            <strong>Movie Recommendation System | <a href="https://github.com/krohitt45" target="_blank"
+                                    style="color: #00f7ff;">GitHub</a></strong> <span style="float:right;">Nov '25 – Dec
+                                '25</span>
+                            <ul style="margin-top: 10px;">
+                                <li>Developed a movie recommendation system using unsupervised machine learning
+                                    techniques to suggest Movies based on user preferences and similarity patterns.</li>
+                                <li>Implemented clustering and similarity-based algorithms to group movies/users without
+                                    labeled data.</li>
+                                <li>Used feature extraction (genre, ratings, keywords) to represent movies numerically
+                                    for machine learning.</li>
+                                <li>Applied cosine similarity / distance metrics to generate personalized
+                                    recommendations.</li>
+                                <li>Designed the system to provide content-based recommendations efficiently.</li>
+                                <li>Improved recommendation accuracy by optimizing similarity calculations and feature
+                                    selection.</li>
+                                <li><strong>Tech:</strong> Python, Machine Learning, Unsupervised Learning, Pandas ,
+                                    NumPy.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Mental Health Simulation System | <a href="https://github.com/krohitt45"
+                                    target="_blank" style="color: #00f7ff;">GitHub</a></strong> <span
+                                style="float:right;">Jul '25 – Aug '25</span>
+                            <ul style="margin-top: 10px;">
+                                <li>Designed and developed a console-based mental health simulation system using C++ to
+                                    model user mental states and behavioral responses based on predefined rules and
+                                    dynamic user inputs.</li>
+                                <li>Implemented Data Structures such as arrays, stacks, queues, linked lists, and maps
+                                    to manage user data, mood history, and session tracking with efficient storage,
+                                    faster access, and structured data flow mechanisms.</li>
+                                <li>Applied DSA concepts like searching, sorting, and recursion for efficient data
+                                    retrieval and analysis of mental health patterns to support predictive insights,
+                                    trend identification, emotional correlations.</li>
+                                <li>Simulated stress, anxiety, and mood level changes based on user inputs and
+                                    predefined rules.</li>
+                                <li>Developed logic for risk assessment and recommendations using conditional algorithms
+                                    and state transitions.</li>
+                                <li>Ensured modular and optimized code structure using OOP concepts (classes, objects,
+                                    encapsulation).</li>
+                                <li>Improved program performance by optimizing time and space complexity of core
+                                    operations.</li>
+                                <li><strong>Tech:</strong> C++, DSA, STL, OOPs</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Deadlock Detection System | <a href="https://github.com/krohitt45" target="_blank"
+                                    style="color: #00f7ff;">GitHub</a></strong> <span style="float:right;">Apr '25 – May
+                                '25</span>
+                            <ul style="margin-top: 10px;">
+                                <li>Developed a Deadlock Detection System to identify deadlock conditions in an
+                                    operating system environment .</li>
+                                <li>Implemented deadlock detection algorithms using resource allocation graphs and
+                                    process-resource mapping for efficient dependency tracking for deadlock
+                                    identification and system analysis.</li>
+                                <li>Analyzed circular wait conditions to detect deadlocks among multiple processes
+                                    execution and synchronization.</li>
+                                <li>Tracked resource allocation, requests, and availability using suitable data
+                                    structures for optimization.</li>
+                                <li>Gained hands-on experience with operating system concepts such as deadlocks,
+                                    synchronization, and resource management.</li>
+                                <li><strong>Tech:</strong> HTML, CSS, Javascript</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Cpp with DSA & OOPs | Certificate</strong> <span style="float:right;">Jun '25 – Jul
+                                '25</span>
+                            <ul style="margin-top: 10px;">
+                                <li>About: The hands-on training in C++ programming focused on Object-Oriented
+                                    Programming (OOPs) and Data Structures & Algorithms.</li>
+                                <li>Gained practical experience in classes, objects, inheritance, polymorphism,
+                                    abstraction, and encapsulation.</li>
+                                <li>Implemented arrays, linked lists, stacks, and queues, along with searching and
+                                    sorting algorithms.</li>
+                                <li>Enhanced proficiency in C++ syntax, STL , memory management, and clean modular code
+                                    design.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <h3>Certificates</h3>
+                    <ul>
+                        <li>Java Programming Certification – Neo Colab <span style="float:right;">May '25</span></li>
+                        <li>Master Generative AI & Generative AI Tools | Infosys Springboard</li>
+                    </ul>
+                </div>
+
+                <div class="resume-card">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <strong>Lovely Professional University</strong> <span style="float:right;">Punjab,
+                                India</span><br>
+                            Bachelor of Technology - Computer Science and Engineering; <strong>CGPA: 5.71</strong> <span
+                                style="float:right;">Aug 2023 – Present.</span>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Laxmi Narayan Dubey College</strong> <span style="float:right;">Bihar,
+                                India</span><br>
+                            Intermediate; <strong>Percentage: 75%</strong> <span style="float:right;">Jun 2021 - Mar
+                                2021</span>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Noneya High School</strong> <span style="float:right;">Bihar, India</span><br>
+                            Matriculation; <strong>Percentage: 82%</strong> <span style="float:right;">Apr 2018 - Apr
+                                2019</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resume-card" style="margin-bottom: 20px;">
+                    <h3>Download</h3>
+                    <p><a href="rohit.jpg" download class="download-button">Download CV</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
