@@ -239,10 +239,10 @@ nav a.active {
 }
 
 .hexagon-inner img {
-    width: 100%;
+    width: auto;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    clip-path: inset(0 3px);
     transition: 0.5s;
 }
 
