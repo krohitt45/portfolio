@@ -98,7 +98,7 @@ document.body.addEventListener("click", function (e) {
                 <div class="modal-content" style="max-width: 800px; text-align: center;">
                     <span class="close-btn" id="closeCvModal">&times;</span>
                     <div class="modal-body" id="cvModalBody" style="padding: 20px; background: transparent;">
-                        <img src="rohit.jpg" alt="Rohit Kumar CV" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,247,255,0.2);">
+                        <img src="mulz.jpeg" alt="Rohit Kumar CV" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,247,255,0.2);">
                     </div>
                 </div>
             `;
