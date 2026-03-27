@@ -219,7 +219,7 @@ nav a.active {
     height: 354px;
     background: var(--primary);
     position: relative;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +231,7 @@ nav a.active {
     /* slightly thicker cyan border matching mockup */
     height: calc(100% - 14px);
     background: #fff;
-    clip-path: inherit;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,10 +239,10 @@ nav a.active {
 }
 
 .hexagon-inner img {
-    width: auto;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: inset(0 3px);
+    object-position: top;
     transition: 0.5s;
 }
 
